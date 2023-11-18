@@ -30,9 +30,21 @@ namespace MuLinq
         public static TSource FisrtOrDefault<TSource>(this IEnumerable<TSource> source)
         {
             foreach (var item in source)
-                return item;
+                return item; 
+
+            return default(TSource);
+        }
+
+        public static TSource FisrtOrDefault<TSource>(this IEnumerable<TSource> source, Predicate<TSource> criterion)
+        {
+            foreach (var item in source)
+            {
+                if (criterion?.Invoke(item) == true)
+                    return item;
+            }
 
             return default(TSource);
         }
     }
+
 }
