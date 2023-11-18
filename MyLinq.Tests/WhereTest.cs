@@ -67,5 +67,24 @@ namespace MyLinq.Tests
 
             Assert.Throws<InvalidOperationException>(() => item.First());
         }
+
+        [Fact]
+        public void EmptyCollection_FirstOrDefault_ReturnsDefault()
+        {
+            var item = Array.Empty<int>();
+
+            var result = item.FirstOrDefault();
+
+            Assert.Equal(0, result);
+        }
+
+        public void EmptyCollection_FirstOrDefault_ReturnsFirst()
+        {
+            var item = new[] { 1, 2, 3 };
+
+            var result = item.FirstOrDefault();
+
+            Assert.Equal(1, result);
+        }
     }
 }

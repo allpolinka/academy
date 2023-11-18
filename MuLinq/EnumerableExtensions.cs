@@ -26,5 +26,13 @@ namespace MuLinq
 
             throw new InvalidOperationException();
         }
+
+        public static TSource FisrtOrDefault<TSource>(this IEnumerable<TSource> source)
+        {
+            foreach (var item in source)
+                return item;
+
+            return default(TSource);
+        }
     }
 }
