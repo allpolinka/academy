@@ -1,4 +1,6 @@
-﻿namespace MuLinq
+﻿using System.Diagnostics;
+
+namespace MuLinq
 {
     public static class EnumerableExtensions
     {
@@ -17,9 +19,12 @@
 
             return result.ToArray();    
         }
-        public void First()
+        public static TSource First<TSource>(this IEnumerable<TSource> source)
         {
+            foreach (var item in source)
+                return item;
 
+            throw new InvalidOperationException();
         }
     }
 }

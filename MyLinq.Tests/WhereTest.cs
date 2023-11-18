@@ -51,5 +51,21 @@ namespace MyLinq.Tests
             //Assert
             Assert.Single(result);
         }
+
+        [Fact]
+        public void CollectionWithElements_First_Success()
+        {
+            var item = new[] { 1, 2, 3, 4 };
+
+            Assert.Equal(1, item.First());
+        }
+
+        [Fact]
+        public void EmptyCollection_First_Throws()
+        {
+            var item = Array.Empty<int>();
+
+            Assert.Throws<InvalidOperationException>(() => item.First());
+        }
     }
 }
