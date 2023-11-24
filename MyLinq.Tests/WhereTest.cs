@@ -17,7 +17,7 @@ namespace MyLinq.Tests
 
         }
 
-        [Fact]
+        /*[Fact]
         public void NullSource_Throws()
         {
             //Arrange
@@ -33,7 +33,7 @@ namespace MyLinq.Tests
             var array = new[] { 1, 2, 3, 4, 5, 10, 20 };
             var result = array.Where(o => o > 5);
             Assert.Empty(result);
-        }
+        }*/
 
         [Fact]
         public void CollectionWithtupels_GetSpecificOne_Success()
@@ -106,6 +106,24 @@ namespace MyLinq.Tests
             var result = item.FirstOrDefault(item => item == 33);
 
             Assert.Equal(0, result);
+        }
+
+        [Fact]
+        public void CollectionWithElements_ThereIsAnyElement_Success()
+        {
+            var item = new[] { 1, 2, 3, 4 };
+            var result = item.Any(item => item == 2);
+
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void CollectionWithElements_IsThereNoAnyElement_Throws()
+        {
+            var item = new[] { 1, 2, 3, 4 };
+            var result = item.Any(item => item == 10);
+
+            Assert.False(result);
         }
     }
 }

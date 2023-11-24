@@ -45,6 +45,12 @@ namespace MuLinq
 
             return default(TSource);
         }
+        public static bool Any<TSource>(this IEnumerable<TSource> source)
+        {
+            if (source != null)
+                return true;
+            return false;
+        }
     }
 
 }
