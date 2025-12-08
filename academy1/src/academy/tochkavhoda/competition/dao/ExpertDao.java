@@ -1,7 +1,6 @@
 package academy.tochkavhoda.competition.dao;
 
 import academy.tochkavhoda.competition.model.Expert;
-import academy.tochkavhoda.competition.model.Participant;
 
 public interface ExpertDao {
     void insert(Expert e); //добавить нового эксперта в "хранилище".
