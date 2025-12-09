@@ -5,7 +5,7 @@ import academy.tochkavhoda.competition.model.Expert;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InMemoryExpertDao implements ExpertDao {
+public class ExpertDaoImpl implements ExpertDao {
     private final Map<String, Expert> experts = new HashMap<>();
 
     @Override
