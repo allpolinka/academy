@@ -5,7 +5,7 @@ import academy.tochkavhoda.competition.dao.ParticipantDao;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InMemoryParticipantDao implements ParticipantDao{
+public class ParticipantDaoImpl implements ParticipantDao{
     private final Map<String, Participant> participants = new HashMap<>();
 
     @Override
