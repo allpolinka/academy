@@ -3,17 +3,17 @@ package academy.tochkavhoda.competition.model;
 import java.util.Objects;
 
 public class Rating {
-    private final String expertLogin; //Логин эксперта
+    private final int expertId; //целочисленный идентификатор эксперта
     private final int applicationId; //ID заявки
     private int value; //Значение оценки (1-5)
 
-    public Rating(String expertLogin, int applicationId, int value){
-        this.expertLogin = expertLogin;
+    public Rating(int expertId, int applicationId, int value){
+        this.expertId = expertId;
         this.applicationId = applicationId;
         this.value = value;
     }
 
-    public String getExpertLogin() {return expertLogin;}
+    public Integer getExpertId() {return expertId;}
 
     public int getApplicationId() {return applicationId;}
 
@@ -30,11 +30,11 @@ public class Rating {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Rating rating = (Rating) o;
-        return applicationId == rating.applicationId && Objects.equals(expertLogin, rating.expertLogin);
+        return applicationId == rating.applicationId && Objects.equals(expertId, rating.expertId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(expertLogin, applicationId);
+        return Objects.hash(expertId, applicationId);
     }
 }
