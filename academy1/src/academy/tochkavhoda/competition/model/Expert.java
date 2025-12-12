@@ -8,10 +8,10 @@ public class Expert extends User{
 
     public Expert(String firstName, String lastName, String login, String password, Set<String> expertDirections){
         super(firstName, lastName, login, password);
-        this.expertDirections = new HashSet<>(expertDirections); //HashSet - копирует содержимое объекта и не похволяет его изменить
+        this.expertDirections = expertDirections; //HashSet - копирует содержимое объекта и не похволяет его изменить
     }
 
     public Set<String> getExpertDirections() {
-        return new HashSet<>(expertDirections);
+        return expertDirections;
     }
 }
