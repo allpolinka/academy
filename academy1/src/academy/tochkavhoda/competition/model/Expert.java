@@ -1,14 +1,15 @@
 package academy.tochkavhoda.competition.model;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Expert extends User{
+    private final Integer id;
     private Set<String> expertDirections; //Множество направлений экспертов
 
-    public Expert(String firstName, String lastName, String login, String password, Set<String> expertDirections){
+    public Expert(String firstName, String lastName, String login, String password, Integer id, Set<String> expertDirections){
         super(firstName, lastName, login, password);
-        this.expertDirections = expertDirections; //HashSet - копирует содержимое объекта и не похволяет его изменить
+        this.id = id;
+        this.expertDirections = expertDirections;
     }
 
     public Set<String> getExpertDirections() {
