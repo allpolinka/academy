@@ -1,16 +1,15 @@
 package academy.tochkavhoda.competition.dao;
 
 import academy.tochkavhoda.competition.model.Application;
-import academy.tochkavhoda.competition.model.Expert;
-import academy.tochkavhoda.competition.model.Rating;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ApplicationDao {
     void insert(Application a); //добавить новую заявку в "хранилище".
-    Application getById(String id); //найти заявку по id
+    Application getById(Integer id); //найти заявку по id
     List<Application> getAll(); //
-    void insertRating(Rating r); //добавить новую оценку в "хранилище".
-    List<Rating> getRatingsForApplication(String appId); //
-    void removeRating(String ratingId); //удалить эксперта из системы
+    List<Application> getByDirections(Set<String> directions); // Заявки по направлениям (для эксперта).
+    List<Application> getByParticipantLogin(String login); // Заявки участника (для удаления).
+    void remove(int id);
 }
