@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Application {
     private static int nextId = 1;
-    private String id; //уникальный код заявки
+    private Integer id; //уникальный код заявки
     private String participiantLogin; //Логин участника, подавшего заявку
     private String title; //Название заявки
     private String description; //Описание
@@ -15,17 +15,17 @@ public class Application {
     private double requestedAmount; //Запрашиваемая сумма
     private Set<Rating> ratings; //Список оценок
 
-    public Application(String id, String participiantLogin, String title, String description, Set<String> directions, double requestedAmount, Set<Rating> ratings) {
+    public Application(Integer id, String participiantLogin, String title, String description, Set<String> directions, double requestedAmount, Set<Rating> ratings) {
         this.id = id;
         this.participiantLogin = participiantLogin;
         this.title = title;
         this.description = description;
         this.directions = directions;
         this.requestedAmount = requestedAmount;
-        this.ratings = new HashSet<>(ratings);
+        this.ratings = ratings;
     }
 
-    public String getId() {return id;}
+    public Integer getId() {return id;}
 
     public String getParticipiantLogin() {return participiantLogin;}
 
@@ -37,7 +37,7 @@ public class Application {
 
     public double getRequestedAmount() {return requestedAmount;}
 
-    public Set<Rating> getRating() {return new HashSet<>(ratings);}
+    public Set<Rating> getRating() {return ratings;}
 
     // Метод для добавления/обновления оценки. Логика: Если оценка от этого эксперта уже есть, обновляем; иначе добавляем.
     public void addOrUpdateRating(Rating rating) {
