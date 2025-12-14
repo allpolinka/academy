@@ -5,6 +5,6 @@ import academy.tochkavhoda.competition.model.Participant;
 public interface ParticipantDao {
     void insert(Participant p); //добавить нового участника в "хранилище".
     Participant getByLogin(String login); //найти участника по логину
-    Participant getById(String id); //найти участника по id
-    void remove(String id); //удалить участника из системы
+    Participant getById(Integer id); //найти участника по id
+    void remove(Integer id); //удалить участника из системы
 }
