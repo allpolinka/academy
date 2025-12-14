@@ -10,6 +10,6 @@ public interface ApplicationDao {
     Application getById(Integer id); //найти заявку по id
     List<Application> getAll(); //
     List<Application> getByDirections(Set<String> directions); // Заявки по направлениям (для эксперта).
-    List<Application> getByParticipantLogin(String login); // Заявки участника (для удаления).
+    List<Application> getParticipiantLogin(String login); // Заявки участника (для удаления).
     void remove(int id);
 }
