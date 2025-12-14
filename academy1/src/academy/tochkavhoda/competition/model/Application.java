@@ -1,7 +1,5 @@
 package academy.tochkavhoda.competition.model;
 
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -41,13 +39,13 @@ public class Application {
 
     // Метод для добавления/обновления оценки. Логика: Если оценка от этого эксперта уже есть, обновляем; иначе добавляем.
     public void addOrUpdateRating(Rating rating) {
-        ratings.removeIf(r -> r.getExpertLogin().equals(rating.getExpertLogin())); // Удаляем старую, если есть
+        ratings.removeIf(r -> r.getExpertId().equals(rating.getExpertId())); // Удаляем старую, если есть
         ratings.add(rating); // Добавляем новую
     }
 
     // Метод для удаления оценки эксперта. Логика: Удаляем по логину эксперта.
     public void removeRating(String expertLogin) {
-        ratings.removeIf(r -> r.getExpertLogin().equals(expertLogin));
+        ratings.removeIf(r -> r.getExpertId().equals(expertLogin));
     }
 
     // Вычисление средней оценки. Логика: Если оценок нет, возвращаем 0; иначе среднее.
