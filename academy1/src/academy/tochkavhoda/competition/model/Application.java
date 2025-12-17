@@ -1,5 +1,6 @@
 package academy.tochkavhoda.competition.model;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -21,6 +22,9 @@ public class Application {
         this.directions = directions;
         this.requestedAmount = requestedAmount;
         this.ratings = ratings;
+    }
+
+    public Application(String trim, String trim1, HashSet<String> strings, double requestedAmount, String login) {
     }
 
     public Integer getId() {return id;}

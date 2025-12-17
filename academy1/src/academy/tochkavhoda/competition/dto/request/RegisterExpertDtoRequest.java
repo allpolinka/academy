@@ -3,13 +3,14 @@ package academy.tochkavhoda.competition.dto.request;
 import java.util.List;
 
 public class RegisterExpertDtoRequest {
-    private String firstName;
-    private String lastName;
+    public String firstName;
+    public String lastName;
+    public List<String> topics;
     private List<String> directions;
-    private String login;
-    private String password;
+    public String login;
+    public String password;
 
-    public RegisterExpertDtoRequest(String firstName, String lastName, List<String> directions, String login, String password){
+    public RegisterExpertDtoRequest(){
         this.firstName = firstName;
         this.lastName = lastName;
         this.directions = directions;

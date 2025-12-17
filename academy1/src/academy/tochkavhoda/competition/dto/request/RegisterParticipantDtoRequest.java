@@ -1,13 +1,13 @@
 package academy.tochkavhoda.competition.dto.request;
 
 public class RegisterParticipantDtoRequest {
-    private String firstName;
-    private String lastName;
-    private String companyName;
-    private String login;
-    private String password;
+    public String firstName;
+    public String lastName;
+    public String companyName;
+    public String login;
+    public String password;
 
-    public RegisterParticipantDtoRequest(String firstName, String lastName, String companyName, String login, String password){
+    public RegisterParticipantDtoRequest(){
         this.firstName = firstName;
         this.lastName = lastName;
         this.companyName = companyName;

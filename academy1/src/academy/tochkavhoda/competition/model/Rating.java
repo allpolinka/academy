@@ -7,8 +7,8 @@ public class Rating {
     private final int applicationId; //ID заявки
     private int value; //Значение оценки (1-5)
 
-    public Rating(int expertId, int applicationId, int value){
-        this.expertId = expertId;
+    public Rating(String expertId, int applicationId, int value){
+        this.expertId = Integer.parseInt(expertId);
         this.applicationId = applicationId;
         this.value = value;
     }

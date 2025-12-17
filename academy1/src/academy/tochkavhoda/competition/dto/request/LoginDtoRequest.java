@@ -1,10 +1,10 @@
 package academy.tochkavhoda.competition.dto.request;
 
 public class LoginDtoRequest {
-    private String login;
-    private String password;
+    public String login;
+    public String password;
 
-    public LoginDtoRequest(String login, String password){
+    public LoginDtoRequest(){
         this.login = login;
         this.password = password;
     }

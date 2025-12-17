@@ -1,5 +1,6 @@
 package academy.tochkavhoda.competition.model;
 
+import java.util.List;
 import java.util.Set;
 
 public class Expert extends User{

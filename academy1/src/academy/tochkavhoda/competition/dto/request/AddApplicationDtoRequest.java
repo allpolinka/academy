@@ -3,12 +3,12 @@ package academy.tochkavhoda.competition.dto.request;
 import java.util.List;
 
 public class AddApplicationDtoRequest {
-    private String title;
-    private String description;
-    private List<String> directions;
-    private double requestedAmount;
+    public String title;
+    public String description;
+    public List<String> directions;
+    public double requestedAmount;
 
-    public AddApplicationDtoRequest(String title, String description, List<String> directions, double requestedAmount){
+    public AddApplicationDtoRequest(){
         this.title = title;
         this.description = description;
         this.directions = directions;
