@@ -13,7 +13,7 @@ public class RatingDaoImpl implements RatingDao {
     @Override
     public void insert(Rating rating) {
         if (rating == null) {
-            throw new IllegalArgumentException("Rating не может быть null");
+            throw new IllegalArgumentException("Оценка не может быть null");
         }
         String key = rating.getExpertId() + ":" + rating.getApplicationId();
         ratings.put(key, rating);
